@@ -9,6 +9,9 @@ app = FastAPI()
 
 API_KEY = os.getenv("API_KEY")
 
+# TODO: wire up JWT_SECRET and ENCRYPTION_KEY (fernet) once the account
+# service migrates off this API key, see staging-portal repo
+
 
 @app.get("/api/v1/health")
 def health():
